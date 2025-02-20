@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax-Axios</title>
+    <script src="js/axios-0.18.0.js"></script>
+    
+</head>
+<body>
+    
+    <input type="button" value="获取数据GET" onclick="get()">
+
+    <input type="button" value="删除数据POST" onclick="post()">
+
+</body>
+
+<script>
+    // function get(){
+    //     axios.get('https://mock.apifox.cn/m1/3128855-0-default/emp/list')
+    //     .then(function(response){
+    //         console.log(response);
+    //     })
+    //     .catch(function(error){
+    //         console.log(error);
+    //     });
+    // }
+
+    // function post(){
+    //     axios.post('https://mock.apifox.cn/m1/3128855-0-default/emp/delete')
+    //     .then(function(response){
+    //         console.log(response);
+    //     })
+    //     .catch(function(error){
+    //         console.log(error);
+    //     });
+    // }
+
+    function get(){
+      axios.get('https://mock.apifox.cn/m1/3128855-0-default/emp/list')
+      .then(function(response){
+        console.log(response);
+      }).catch(function(error){
+        console.log(error);
+      });
+
+
+    function post(){
+      axios.post('https://mock.apifox.cn/m1/3128855-0-default/emp/delete')
+      .then(function(response){
+          console.log(response);
+      })
+      .catch(function(error){
+          console.log(error);
+      });
+    }
+  }
+</script>
